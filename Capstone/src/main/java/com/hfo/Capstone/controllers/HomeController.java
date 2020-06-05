@@ -1,4 +1,4 @@
-package com.hfo.Capstone;
+package com.hfo.Capstone.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
