@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+</head>
+<body>
+
+<!--<div th:replace="fragments :: page-header"></div>-->
+
+
+
+<div class="container body-content">
+    <h2>Shopping List</h2>
+    <p th:unless="${items} and ${items.size()}">Shopping List is empty</p>
+    <ul>
+        <li th:each="item : ${items}"></li>
+    </ul>
+    <a th:href="@{'/shopping/add'}">Add Item</a>
+
+</div>
+
+</body>
+</html>
