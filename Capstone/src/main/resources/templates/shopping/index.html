@@ -4,13 +4,13 @@
 </head>
 <body>
 
-<!--<div th:replace="fragments :: page-header"></div>-->
+<div th:replace="fragments :: page-header"></div>
 
 
 
 <div class="container body-content">
     <h2>Shopping List</h2>
-    <p th:unless="${items} and ${items.size()}">Shopping List is empty</p>
+    <h4 th:unless="${items} and ${items.size()}">Shopping List is empty</h4>
     <ul>
         <li th:each="item : ${items}"></li>
     </ul>
