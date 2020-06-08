@@ -42,6 +42,6 @@ public class ShoppingController {
         }
 
         shoppingRepository.save(newItem);
-        return "shopping/index";
+        return "redirect:";
     }
 }

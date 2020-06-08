@@ -39,6 +39,6 @@ public class RecipeController {
             return "recipes/add";
         }
         recipeRepository.save(newRecipe);
-        return "recipes/index";
+        return "redirect:";
     }
 }

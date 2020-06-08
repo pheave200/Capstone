@@ -40,6 +40,6 @@ public class LibraryController extends AbstractEntity {
             return "library/add";
         }
         libraryRepository.save(newBook);
-        return "library/index";
+        return "redirect:";
     }
 }
