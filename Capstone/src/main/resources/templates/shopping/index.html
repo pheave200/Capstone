@@ -6,13 +6,14 @@
 
 <div th:replace="fragments :: page-header"></div>
 
-
-
 <div class="container body-content">
     <h2>Shopping List</h2>
-    <h4 th:unless="${items} and ${items.size()}">Shopping List is empty</h4>
+<!--    <h4 th:unless="${items} and ${items.size()}">Shopping List is empty</h4>-->
     <ul>
-        <li th:each="item : ${items}"></li>
+        <li th:each="item : ${items}">
+            <a th:text="${item.name}"></a>
+            <a th:text="${item.price}"></a>
+        </li>
     </ul>
     <a th:href="@{'/shopping/add'}">Add Item</a>
 

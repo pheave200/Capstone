@@ -14,7 +14,7 @@ public class Item extends AbstractEntity {
 
     public Item() {}
 
-    public Item(List<Item> items) {
+    public Item(Double price) {
         super();
         this.price = price;}
 

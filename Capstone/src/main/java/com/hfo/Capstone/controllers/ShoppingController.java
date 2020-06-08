@@ -24,7 +24,7 @@ public class ShoppingController {
     public String index(Model model) {
 
         model.addAttribute("title", "Shopping List");
-        model.addAttribute("Items", shoppingRepository.findAll());
+        model.addAttribute("items", shoppingRepository.findAll());
         return "shopping/index";
     }
 
@@ -42,6 +42,6 @@ public class ShoppingController {
         }
 
         shoppingRepository.save(newItem);
-        return "shopping/add";
+        return "shopping/index";
     }
 }
