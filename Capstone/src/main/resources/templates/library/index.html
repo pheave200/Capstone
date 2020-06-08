@@ -6,16 +6,17 @@
 
 <div th:replace="fragments :: page-header"></div>
 
-
-
 <div class="container body-content">
     <h2>Home Library</h2>
+    <!--    <h4 th:unless="${items} and ${items.size()}">Shopping List is empty</h4>-->
     <ul>
-        <li th:each="employer : ${employers}">
-            <a th:href="@{'/employers/view/' + ${employer.id}}" th:text="${employer.name}"></a>
+        <li th:each="book : ${books}">
+            <a th:text="${book.name}"></a>
+            <a th:text="${book.author}"></a>
+            <a th:text="${book.genre}"></a>
         </li>
     </ul>
-    <a th:href="@{'/employers/add'}">Add Employers</a>
+    <a th:href="@{'/library/add'}">Add Book</a>
 
 </div>
 
