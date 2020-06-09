@@ -6,10 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -42,6 +39,23 @@ public class ShoppingController {
         }
 
         shoppingRepository.save(newItem);
+        return "redirect:";
+    }
+
+    @GetMapping("delete")
+    public String displayDeleteItemForm(Model model) {
+        model.addAttribute("title", "Delete Item");
+        model.addAttribute("items", shoppingRepository.findAll());
+        return "shopping/delete";
+    }
+
+    @PostMapping("delete")
+    public String processDeleteItemForm(@RequestParam(required = false) int[] itemIds) {
+        if (itemIds!=null) {
+            for (int id:itemIds) {
+                shoppingRepository.deleteById(id);
+            }
+        }
         return "redirect:";
     }
 }

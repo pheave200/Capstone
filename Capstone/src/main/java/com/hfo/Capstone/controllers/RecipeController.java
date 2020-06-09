@@ -6,10 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -39,6 +36,22 @@ public class RecipeController {
             return "recipes/add";
         }
         recipeRepository.save(newRecipe);
+        return "redirect:";
+    }
+    @GetMapping("delete")
+    public String displayDeleteRecipeForm(Model model) {
+        model.addAttribute("title", "Delete Recipe");
+        model.addAttribute("recipes", recipeRepository.findAll());
+        return "recipes/delete";
+    }
+
+    @PostMapping("delete")
+    public String processDeleteRecipeFOrm(@RequestParam(required = false) int [] recipeIds) {
+        if (recipeIds!=null) {
+            for (int id:recipeIds) {
+                recipeRepository.deleteById(id);
+            }
+        }
         return "redirect:";
     }
 }
