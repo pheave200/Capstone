@@ -8,15 +8,25 @@
 
 <div class="container body-content">
     <h2>Home Library</h2>
-    <!--    <h4 th:unless="${items} and ${items.size()}">Shopping List is empty</h4>-->
-    <ul>
-        <li th:each="book : ${books}">
-            <a th:text="${book.name}"></a>
-            <a th:text="${book.author}"></a>
-            <a th:text="${book.genre}"></a>
-        </li>
-    </ul>
-    <a th:href="@{'/library/add'}">Add Book</a>
+    <a th:href="@{'/library/add'}">Add a Book</a>
+        <h4 th:unless="${books} and ${books.size()}">Library is empty</h4>
+    <table th:each="book : ${books}" class = "job-listing">
+        <tr>
+            <th>Book Title:</th>
+            <td th:text="${book.name}"></td>
+        </tr>
+        <tr>
+            <th>Author:</th>
+            <td th:text = "${book.author}"></td>
+        </tr>
+        <tr>
+            <th>Genre:</th>
+            <td th:text = "${book.genre}"></td>
+        </tr>
+    </table>
+
+
+
 
 </div>
 
