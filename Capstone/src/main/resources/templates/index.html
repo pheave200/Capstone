@@ -6,8 +6,8 @@
 
 <div th:replace="fragments :: page-header"></div>
 
-<button class="button button5">Library</button>
-<button class="button button5">Shopping List</button>
-<button class="button button5">Recipes</button>
+<button class="button button5"><a th:href="@{/library}">Library</a></button>
+<button class="button button5"><a th:href="@{/shopping}">Shopping</a></button>
+<button class="button button5"><a th:href="@{/recipes}">Recipes</a></button>
 </body>
 </html>
