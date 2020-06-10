@@ -11,15 +11,15 @@
     <a th:href="@{'/shopping/add'}">Add Item</a>
     <a th:href="@{'/shopping/delete'}">Delete Item</a>
     <h4 th:unless="${items} and ${items.size()}">Shopping List is empty</h4>
+
     <table th:each="item : ${items}" class = "job-listing">
         <tr>
-            <td th:text="${item.name}"></td>
-            <td th:text ="${item.price}"></td>
+            <th th:text="${item.name}"></th>
         </tr>
     </table>
-
-
 </div>
+
+
 <!--<button onclick="topFunction()" id="myBtn" title="Go to top">Top of page</button>-->
 </body>
 </html>
