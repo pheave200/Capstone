@@ -1,19 +1,18 @@
 #Capstone Project Overview
 ##Application Name
 **********************************************
-Tech Job Seeker
+Family Organizer
 
 ##Elevator Pitch
 **********************************************
-This application allows job seekers to find and search for jobs on the market and for users to search for jobs.This application allows job seekers to find and search for jobs on the market and for users to search for jobs.This application allows job seekers to find and search for jobs on the market and for users to search for jobs.This application allows job seekers to find and search for jobs on the market and for users to search for jobs.
-
-This application allows job seekers to find and search for jobs on the market and for users to search for jobs.This application allows job seekers to find and search for jobs on the market and for users to search for jobs.This application allows job seekers to find and search for jobs on the market and for users to search for jobs.This application allows job seekers to find and search for jobs on the market and for users to search for jobs.
+This application will enable family members to collaborate and share ideas, recipes, family history, and 
+several other aspects of family life.
 
 ##Key Features
 **********************************************
-1. User and Admin Login
-2. Saved jobs within User Profiles
-3. Google Maps integration for Employer location
+1. Home Library, Shopping List and Recipe databases
+2. Family members can add/edit each database
+3. User and Admin Login
 
 ##Technologies List
 **********************************************
@@ -21,30 +20,23 @@ This application allows job seekers to find and search for jobs on the market an
 2. Java
 3. Bootstrap
 4. CSS
-5. Google Maps API
+5. Javascript
+6. HTML
 
 ##Example Applications
 **********************************************
-Indeed.com : https://www.indeed.com/
-monster.com : https://www.monster.com/
+Cozi Family Organizer: https://www.mycozi.com/homepage
+Our Home: http://www.ourhomeapp.com
 
 
 ##Initial User stories
 **********************************************
-As a Job Seeker I want to list all available jobs so that I can get an overview of the overall job market.
-
-As a Job Seeker I want to search for jobs by location, skill and employer so I can find jobs that are within specfication.
-
-As a Job Seeker I want to access a personal profile of my choices so I can have jobs specific to my needs display.
-
-As a Job Seeker I want to save relivent jobs to my profile so I can return to them on a later date.
-
-As a Company I want to add in a new job entries so I can allow job seekers to easily find them.
-
-As a Company I want to edit in a job entries so I can update their status their properties easily.
-
-As a Company I want to disable job entries that I am no longer offering so that job seekers can not see them.
-
-As a Company I want to delete job entries that are no longer valid so that job seeker can not access them.
-
-As a Company I want to see a list of all of my job entries that are they can easily be edited and updated in the future.
+ - As a user I want to access a home page with links to a Home Library, Shopping List and Recipes.
+ - As a user I want to add books to the Home Library.
+ - As a user I want to be able to add items to the Recipes.
+ - As a user I want to add items to the Shopping list.
+ - As a user I want to delete items from the Shopping list.
+ - As a developer I want to add user authentication.
+ - As a user I want to be able to search for Authors in the Library.
+ - As a developer I want to ensure that only an admin can use the delete functionality.
+ 
