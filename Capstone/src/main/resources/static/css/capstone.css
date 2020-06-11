@@ -93,3 +93,11 @@ img {
   position: relative;
   top: 100px;
 }
+
+.shopping {
+  width: 100%;
+}
+
+th {
+  height: 50px;
+}

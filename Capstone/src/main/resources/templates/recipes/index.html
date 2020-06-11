@@ -11,6 +11,7 @@
         <h4 th:unless="${recipes} and ${recipes.size()}">Recipe List is empty</h4>
     <a th:href="@{'/recipes/add'}">Add Recipe</a>
     <a th:href="@{'/recipes/delete'}">Delete Recipe</a>
+
     <table th:each="recipe : ${recipes}" class = "job-listing">
 
         <tr>
