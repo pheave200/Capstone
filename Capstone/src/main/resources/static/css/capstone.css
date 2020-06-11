@@ -62,7 +62,7 @@ div.job-listing {
     background-color: #e4e4e4;
 }
 .button {
-  background-color: yellow;
+  background-color: #006600;
   border: none;
   color: white;
   position: relative;
@@ -71,7 +71,7 @@ div.job-listing {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 40px;
+  font-size: 30px;
   margin: 30px 30px;
 }
 .button5 {border-radius: 20%;}
@@ -79,8 +79,12 @@ div.job-listing {
 }
 
 .center {
-  display: block;
+
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+}
+
+img {
+  position: relative;
+  top: 75px;
 }
